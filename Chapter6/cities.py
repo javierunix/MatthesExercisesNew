@@ -21,10 +21,10 @@ cities = {
 for key, value in cities.items():
     print(f"City: {key.title()}")
     # Loop over the dict of each city
-    for key, value in value.items():
+    for k, v in value.items():
         # If possible cast value to title format
         try:
-            value = value.title()
+            v = v.title()
         except AttributeError:
-            value = value
-        print(f"\t{key.title()}: {value}")
+            v = v
+        print(f"\t{k.title()}: {v}")
