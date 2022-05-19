@@ -1,0 +1,5 @@
+In Python you can assign variables.
+In Python you can deffine lists.
+In Python you can define functions.
+In Python you can develope video-games.
+In Python you can define special objects.
