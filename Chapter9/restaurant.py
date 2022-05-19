@@ -15,15 +15,3 @@ class Restaurant:
         """Print a message telling that open."""
         print(f"The restaurant {self.restaurant_name.title()} is open.")
 
-
-# Initialize an object of the class.
-restaurant1 = Restaurant('the great wall', 'chinese')
-restaurant2 = Restaurant('los pollos hermanos', 'mexican')
-restaurant3 = Restaurant('oh la la', 'french')
-
-
-# Calling the class methods.
-restaurant1.describe_restaurant()
-restaurant2.describe_restaurant()
-restaurant3.describe_restaurant()
-

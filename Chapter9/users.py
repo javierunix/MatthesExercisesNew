@@ -28,20 +28,3 @@ class User:
     def reset_logging_attempts(self):
         """Reset number of loggings."""
         self.logging_attempts = 0
-
-
-user = User('manolito', 'perez', 34, 'calle lobato', 'fontanero')
-
-print(user.describe_user())
-
-# Increment loggings number.
-user.increment_logging_attempts(10)
-print(user.describe_user())
-user.increment_logging_attempts(10)
-print(user.describe_user())
-
-
-# Reset loggings number.
-user.reset_logging_attempts()
-print(user.describe_user())
-
