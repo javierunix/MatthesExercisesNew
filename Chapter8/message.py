@@ -3,5 +3,5 @@ def display_message():
     print("I have learnt how to define a function.")
 
 
-# Call the function.
-display_message()
+# # Call the function.
+# display_message()
