@@ -9,21 +9,21 @@ class TestEmployee(unittest.TestCase):
         """
         Create a employee and set of rises.
         """
+        self.quantity = 120_000  # Fix a quantity as salary to test rise.
         first_name = 'Bryan'
         last_name = 'Smith'
-        annual_salary = 120_000
-        self.employee = Employee(first_name, last_name, annual_salary)
-        self.rises = [None, 3000, 10000]
+        self.employee = Employee(first_name, last_name, self.quantity)
+        self.rises = [None, 3000, 10000]  # Test three different rises.
 
     def test_three_rises(self):
-        salary = 120_000
-        """Testa that the three rises are stored properly."""
+        """Test that the three rises are stored properly."""
+        salary_test = self.quantity
         for rise in self.rises:
             if not rise:
-                salary += 5000
+                salary_test += 500
             else:
-                salary += rise
-            self.assertEqual(self.employee.give_raise(rise), salary)
+                salary_test += rise
+            self.assertEqual(self.employee.give_raise(rise), salary_test)
 
 
 if __name__ == '__main__':
