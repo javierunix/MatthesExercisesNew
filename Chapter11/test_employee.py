@@ -20,7 +20,7 @@ class TestEmployee(unittest.TestCase):
         salary_test = self.quantity
         for rise in self.rises:
             if not rise:
-                salary_test += 500
+                salary_test += 5000
             else:
                 salary_test += rise
             self.assertEqual(self.employee.give_raise(rise), salary_test)
