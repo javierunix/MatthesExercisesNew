@@ -9,18 +9,31 @@ class TestEmployee(unittest.TestCase):
         """
         Create a employee and set of rises.
         """
-        self.quantity = 120_000  # Fix a quantity as salary to test rise.
+        question = int(input("Enter a salary to test give_rise()> "))
+        self.quantity = question  # Fix a quantity as salary to test rise.
         first_name = 'Bryan'
         last_name = 'Smith'
         self.employee = Employee(first_name, last_name, self.quantity)
-        self.rises = [None, 3000, 10000]  # Test three different rises.
+        self.rises = []
+
+        while True:
+            rise = input("Enter rise ('q' to quit)> ")
+            if rise == 'q':
+                break
+            else:
+                if rise == '':
+                    rise = None
+            try:
+                self.rises.append(int(rise))
+            except TypeError:
+                self.rises.append(rise)
 
     def test_three_rises(self):
         """Test that the three rises are stored properly."""
         salary_test = self.quantity
         for rise in self.rises:
             if not rise:
-                salary_test += 5000
+                salary_test += 4000
             else:
                 salary_test += rise
             self.assertEqual(self.employee.give_raise(rise), salary_test)
